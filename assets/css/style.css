@@ -213,6 +213,20 @@ p {
   transition: 0.3s;
 }
 
+/* Fallback icon for environments where bootstrap icon font fails to render. */
+.mobile-nav-toggle::before {
+  content: '\2630';
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.mobile-nav-toggle.bi-x::before {
+  content: '\2715';
+  font-size: 22px;
+}
+
 #header.header-scrolled .mobile-nav-toggle {
   color: #1e3945;
 }
